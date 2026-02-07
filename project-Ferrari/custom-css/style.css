@@ -1,0 +1,85 @@
+/* ===== Custom Ferrari Font ===== */
+@font-face {
+    font-family: "FerrariSans";
+    src: url("../fonts/Ferrari-SansRegular.woff2") format("woff2"),
+        url("../fonts/Ferrari-SansRegular.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    font-display: fallback;
+}
+
+:root {
+    --f-ferrari-font: "FerrariSans", Arial, Helvetica, sans-serif;
+    
+}
+/* ===== Global font ===== */
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    font-family: var(--f-ferrari-font) !important;
+    font-size: 13px;
+    letter-spacing: .015em;
+    line-height: 1.5;
+    overflow-x: clip;
+    font-family: "FerrariSans", Arial, Helvetica, sans-serif;
+
+
+}
+
+/* logo */
+.Header-logo {
+    height: 50px;
+    margin: 9px 24px 5px 24px;
+}
+/* ===== Navbar ===== */
+.navbar-nav > li {
+    margin: 0 10px;
+    font-family: var(--f-ferrari-font) !important;
+}
+
+.navbar-nav .nav-link {
+    padding: 15px 0;
+    letter-spacing: 2px !important;
+    font-family: var(--f-ferrari-font) !important;
+    font-size: 15px;
+    line-height: 1.27em;
+    font-weight: normal;
+    font-stretch: normal !important;
+    text-transform: uppercase;
+    color: white;
+    
+}
+
+.pt-12{
+
+    padding-top: 12px;
+}
+.me-50{
+
+    margin-right:-40px!important;
+}
+/* ===== Hover / Focus / Active ===== */
+
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link.show,
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus{
+    color: white !important;
+    outline: none;
+}
+
+/* ===== Dropdown ===== */
+
+
+.dropdown:hover>.dropdown-menu {
+    display: block;
+}
+
+.dropdown-toggle {
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+}
