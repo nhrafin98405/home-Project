@@ -14,10 +14,10 @@
 
     <header>
 
-        <div class="container-fluid pt-12">
+        <div class="container-fluid  Header_header__3l7sm">
 
-            <div class="row">
-<!-- logo -->
+            <div class="row Header_content__35CEb p-0">
+                <!-- logo -->
                 <div class="col-1 p-0 me-50">
                     <a href="#" data-event-module-slug="header" data-event-type="CTA" data-event-label="logo"
                         data-event-target="/en-BD" data-eventcat="GW_LOGO" data-acsb-clickable="true"
@@ -34,13 +34,13 @@
 
                 </div>
                 <div class="col-11 p-0">
-<!-- navbar -->
+                    <!-- navbar -->
                     <nav class="navbar navbar-expand-lg ps-0">
                         <div class="container-fluid p-0">
-                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            <button class="navbar-toggler nav-button" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
                                 aria-expanded="false" aria-label="Toggle navigation">
-                                <span class="navbar-toggler-icon"></span>
+                                <span class="text-white ">MENU</span>
                             </button>
                             <div class="collapse navbar-collapse p-0" id="navbarNavDropdown">
                                 <ul class="navbar-nav">
@@ -50,10 +50,12 @@
                                             RACIN
                                         </a>
                                         <ul class="dropdown-menu">
-                                            <li><a class="dropdown-item" href="https://www.ferrari.com/en-EN/auto/elettrica">Elettrica</a>
+                                            <li><a class="dropdown-item"
+                                                    href="https://www.ferrari.com/en-EN/auto/elettrica">Elettrica</a>
                                             </li>
-                                            <li><a class="dropdown-item" href="https://www.ferrari.com/en-EN/auto/849-testarossa">849
-                Testarossa</a></li>
+                                            <li><a class="dropdown-item"
+                                                    href="https://www.ferrari.com/en-EN/auto/849-testarossa">849
+                                                    Testarossa</a></li>
                                             <li><a class="dropdown-item" href="#">Something else here</a></li>
                                         </ul>
                                     </li>
@@ -116,6 +118,133 @@
     </header>
 
     <main>
+
+        <!-- slide-ariya -->
+
+        <div class="container-fluid m-0 p-0 slide-ariya">
+            <div class="row">
+                <div class="col-12">
+                    <div id="carouselExampleDark" class="carousel carousel-dark slide">
+
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <!-- vedio-1 -->
+
+                                <video class="d-block w-100 carousel-video" muted playsinline>
+                                    <source
+                                        src="https://ferrari.scene7.com/is/content/ferrari/gateway-scuderia-ferrari-2026-main-launch-mob"
+                                        type="video/mp4">
+                                </video>
+
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>First slide label</h5>
+                                    <p>Some representative placeholder content for the first slide.</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item ">
+                                <!-- vedio-2 -->
+
+                                <video class="d-block w-100 carousel-video" muted playsinline>
+                                    <source
+                                        src="https://ferrari.scene7.com/is/content/ferrari/3bdb2bca-9d26-4ed8-8fd6-04db0982561c"
+                                        type="video/mp4">
+                                </video>
+
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>First slide label</h5>
+                                    <p>Some representative placeholder content for the first slide.</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item ">
+                                <!-- vedio-3 -->
+
+                                <video class="d-block w-100 carousel-video" muted playsinline>
+                                    <source src="https://ferrari.scene7.com/is/content/ferrari/SS26_DROP2_9x16"
+                                        type="video/mp4">
+                                </video>
+
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>First slide label</h5>
+                                    <p>Some representative placeholder content for the first slide.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- NAVIGATOR (YOUR CODE GOES HERE) -->
+
+                    <div class="f-carousel-navigator__viewport"> 
+                        <ul class="f-carousel-navigator__ul">
+
+                            <li class="f-carousel-navigator__item f-carousel-navigator__item--active">
+                                <button class="f-carousel-navigator__button">
+                                    <span class="f-carousel-navigator__dot"></span>
+                                </button>
+                            </li>
+
+                            <li class="f-carousel-navigator__item">
+                                <button class="f-carousel-navigator__button">
+                                    <span class="f-carousel-navigator__dot"></span>
+                                </button>
+                            </li>
+
+                            <li class="f-carousel-navigator__item">
+                                <button class="f-carousel-navigator__button">
+                                    <span class="f-carousel-navigator__dot"></span>
+                                </button>
+                            </li>
+
+                        </ul>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+
+
+        <!-- custom-js -->
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+
+                const carouselEl = document.querySelector("#carouselExampleDark");
+                const carousel = new bootstrap.Carousel(carouselEl, { interval: false });
+
+                const dots = document.querySelectorAll(".f-carousel-navigator__item");
+                const videos = document.querySelectorAll(".carousel-video");
+
+                // play first video
+                videos[0].play();
+
+                // dot click → slide
+                dots.forEach((dot, index) => {
+                    dot.addEventListener("click", () => {
+                        carousel.to(index);
+                    });
+                });
+
+                // slide change → update dots + play video
+                carouselEl.addEventListener("slid.bs.carousel", e => {
+                    dots.forEach(d => d.classList.remove("f-carousel-navigator__item--active"));
+                    dots[e.to].classList.add("f-carousel-navigator__item--active");
+
+                    videos.forEach(v => {
+                        v.pause();
+                        v.currentTime = 0;
+                    });
+
+                    const activeVideo = e.relatedTarget.querySelector("video");
+                    if (activeVideo) activeVideo.play();
+                });
+
+                // video end → next slide
+                videos.forEach(video => {
+                    video.addEventListener("ended", () => {
+                        carousel.next();
+                    });
+                });
+
+            });
+        </script>
+
+        <!-- slide-ariya end -->
 
 
 

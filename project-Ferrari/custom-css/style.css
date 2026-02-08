@@ -11,8 +11,9 @@
 
 :root {
     --f-ferrari-font: "FerrariSans", Arial, Helvetica, sans-serif;
-    
+
 }
+
 /* ===== Global font ===== */
 
 body {
@@ -29,13 +30,34 @@ body {
 
 }
 
+
+/* header */
+
+
 /* logo */
 .Header-logo {
     height: 50px;
     margin: 9px 24px 5px 24px;
 }
+
+/* ===== Center logo on mobile ONLY ===== */
+@media (max-width: 991.98px) {
+    .Header_content__35CEb {
+        display: flex;
+        position: relative;
+        justify-content: center;
+    }
+
+    .Header_logo__3zG9o {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        margin: 0 auto;
+    }
+}
+
 /* ===== Navbar ===== */
-.navbar-nav > li {
+.navbar-nav>li {
     margin: 0 10px;
     font-family: var(--f-ferrari-font) !important;
 }
@@ -50,23 +72,21 @@ body {
     font-stretch: normal !important;
     text-transform: uppercase;
     color: white;
-    
+
 }
 
-.pt-12{
 
-    padding-top: 12px;
-}
-.me-50{
+.me-50 {
 
-    margin-right:-40px!important;
+    margin-right: -40px !important;
 }
+
 /* ===== Hover / Focus / Active ===== */
 
 .navbar-nav .nav-link.active,
 .navbar-nav .nav-link.show,
 .navbar-nav .nav-link:hover,
-.navbar-nav .nav-link:focus{
+.navbar-nav .nav-link:focus {
     color: white !important;
     outline: none;
 }
@@ -83,3 +103,87 @@ body {
     font-weight: 600;
     color: white;
 }
+
+
+/* nav */
+
+@font-face {
+    font-family: 'Body-Font';
+    src: url(https://static.apps.ferrarinetwork.ferrari.com/autoloader/v1/static/fonts/Ferrari-SansRegular.32fade35.woff2) format("woff2"), url(https://static.apps.ferrarinetwork.ferrari.com/autoloader/v1/static/fonts/Ferrari-SansRegular.12656555.woff) format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: fallback;
+    font-stretch: normal;
+}
+
+.nav-button {
+    position: relative;
+    outline: none;
+    cursor: pointer;
+    border: none;
+    background: none;
+    color: currentColor;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    -o-font-smoothing: antialiased;
+    font-family: "Body-Font";
+    font-weight: normal;
+    font-stretch: normal;
+    letter-spacing: 1px;
+    font-size: 12px;
+    line-height: 1.27em;
+    text-transform: uppercase;
+    padding: 4px 24px 0;
+}
+
+
+/* first-div */
+
+.Header_header__3l7sm {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 700;
+    background: transparent;
+    transition: background-color 200ms;
+}
+
+.Header_content__35CEb {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    padding: 0;
+    margin: 16px auto;
+    -webkit-transition: margin 200ms;
+    transition: margin 200ms;
+}
+
+/* header end */
+
+
+/* main */
+
+
+/* slid-ariya */
+
+.slide-ariya {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.carousel video {
+    height: 100vh;
+    object-fit: cover;
+}
+
+.f-carousel-navigator__button {
+    cursor: pointer;
+}
+/* slid-ariya end */
+
+
+/* main end */
