@@ -13,10 +13,9 @@
 <body>
 
     <header>
+        <div class="container-fluid  Header_header__3l7sm p-0 hader-bg">
 
-        <div class="container-fluid  Header_header__3l7sm">
-
-            <div class="row Header_content__35CEb p-0">
+            <div class="row Header_content__35CEb">
                 <!-- logo -->
                 <div class="col-1 p-0 me-50">
                     <a href="#" data-event-module-slug="header" data-event-type="CTA" data-event-label="logo"
@@ -47,7 +46,7 @@
                                     <li class="nav-item dropdown">
                                         <a class="nav-link dropdown-toggle" href="#" role="button"
                                             data-bs-toggle="dropdown" aria-expanded="false">
-                                            RACIN
+                                            RACING
                                         </a>
                                         <ul class="dropdown-menu">
                                             <li><a class="dropdown-item"
@@ -112,8 +111,19 @@
                     </nav>
 
                 </div>
+                <div class=" ">
+                    <div class="col-12 text-center text-white hero-text">
+                        <h1>Ferrari</h1>
+                        <p>Official Website</p>
+                        <h1>Ferrari</h1>
+                        <p>Official Website</p>
+                        <h1>Ferrari</h1>
+                        <p>Official Website</p>
+                    </div>
+                </div>
             </div>
-        </div>
+
+
 
     </header>
 
@@ -126,6 +136,39 @@
                 <div class="col-12">
                     <div id="carouselExampleDark" class="carousel carousel-dark slide">
 
+                        <!-- <div class="f-carousel-navigator__viewport">
+
+                            <ul class="f-carousel-navigator__ul">
+                                <li class="f-carousel-navigator__item f-carousel-navigator__item--active">
+                                    <button class="f-carousel-navigator__button" type="button"
+                                        data-bs-target="#carouselExampleDark" data-bs-slide-to="0" aria-current="true"
+                                        aria-label="Slide 1">
+                                        
+                                    </button>
+                                </li>
+                                <li class="f-carousel-navigator__item">
+                                    <button class="f-carousel-navigator__button" type="button"
+                                        data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2">
+                                        
+                                    </button>
+                                </li>
+                                <li class="f-carousel-navigator__item">
+                                    <button class="f-carousel-navigator__button" type="button"
+                                        data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3">
+                                        
+                                    </button>
+                                </li>
+                            </ul>
+                        </div> -->
+
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0"
+                                class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+                                aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+                                aria-label="Slide 3"></button>
+                        </div>
                         <div class="carousel-inner">
                             <div class="carousel-item active">
                                 <!-- vedio-1 -->
@@ -167,34 +210,13 @@
                                     <h5>First slide label</h5>
                                     <p>Some representative placeholder content for the first slide.</p>
                                 </div>
+
                             </div>
                         </div>
                     </div>
                     <!-- NAVIGATOR (YOUR CODE GOES HERE) -->
 
-                    <div class="f-carousel-navigator__viewport"> 
-                        <ul class="f-carousel-navigator__ul">
 
-                            <li class="f-carousel-navigator__item f-carousel-navigator__item--active">
-                                <button class="f-carousel-navigator__button">
-                                    <span class="f-carousel-navigator__dot"></span>
-                                </button>
-                            </li>
-
-                            <li class="f-carousel-navigator__item">
-                                <button class="f-carousel-navigator__button">
-                                    <span class="f-carousel-navigator__dot"></span>
-                                </button>
-                            </li>
-
-                            <li class="f-carousel-navigator__item">
-                                <button class="f-carousel-navigator__button">
-                                    <span class="f-carousel-navigator__dot"></span>
-                                </button>
-                            </li>
-
-                        </ul>
-                    </div> -->
                 </div>
             </div>
         </div>
@@ -203,44 +225,48 @@
         <!-- custom-js -->
         <script>
             document.addEventListener("DOMContentLoaded", () => {
-
                 const carouselEl = document.querySelector("#carouselExampleDark");
                 const carousel = new bootstrap.Carousel(carouselEl, { interval: false });
 
-                const dots = document.querySelectorAll(".f-carousel-navigator__item");
+                // Get video slides
                 const videos = document.querySelectorAll(".carousel-video");
 
-                // play first video
-                videos[0].play();
+                // Get indicators
+                const indicators = document.querySelectorAll(".carousel-indicators button");
 
-                // dot click → slide
-                dots.forEach((dot, index) => {
-                    dot.addEventListener("click", () => {
-                        carousel.to(index);
+                // Play first video initially
+                if (videos[0]) videos[0].play();
+
+                // Click on indicators → go to slide
+                indicators.forEach((btn, index) => {
+                    btn.addEventListener("click", () => {
+                        carousel.to(index); // go to the clicked slide
                     });
                 });
 
-                // slide change → update dots + play video
+                // Slide change → update active indicator + play video
                 carouselEl.addEventListener("slid.bs.carousel", e => {
-                    dots.forEach(d => d.classList.remove("f-carousel-navigator__item--active"));
-                    dots[e.to].classList.add("f-carousel-navigator__item--active");
+                    // Update active indicator
+                    indicators.forEach(btn => btn.classList.remove("active"));
+                    indicators[e.to].classList.add("active");
 
+                    // Pause all videos
                     videos.forEach(v => {
                         v.pause();
                         v.currentTime = 0;
                     });
 
+                    // Play active video
                     const activeVideo = e.relatedTarget.querySelector("video");
                     if (activeVideo) activeVideo.play();
                 });
 
-                // video end → next slide
+                // Video end → go to next slide
                 videos.forEach(video => {
                     video.addEventListener("ended", () => {
                         carousel.next();
                     });
                 });
-
             });
         </script>
 
