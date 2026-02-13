@@ -1,73 +1,82 @@
-<!DOCTYPE html>
-<html lang="en">
+        <section class="editorial-carousel py-5">
+            <div class="container">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="bootstrap-5.3.8-dist (1)/bootstrap-5.3.8-dist/css/bootstrap.min.css">
-    <title>Document</title>
-</head>
+                <div class="swiper editorialSwiper">
+                    <div class="swiper-wrapper">
 
-<body>
+                        <!-- Slide 1 -->
+                        <div class="swiper-slide">
+                            <div class="row align-items-center">
 
-    <div class="container-fluid">
-        <div class="row  text-info mx-auto">
+                                <div class="col-md-6 editorial-content">
+                                    <h2>Behind The Vision</h2>
+                                    <p>
+                                        An inside look at the creative and production process shaping the new Ferrari
+                                        Luce.
+                                    </p>
+                                    <a href="#" class="discover-link">
+                                        <span class="link-text">Discover More</span>
+                                        <span class="icon-wrapper">
+                                            <svg class="circle-svg" viewBox="0 0 40 40">
+                                                <!-- Base white border -->
+                                                <circle class="circle-base" cx="20" cy="20" r="19" fill="none"
+                                                    stroke="white" stroke-width="2" />
+                                                <!-- Hover animated border -->
+                                                <circle class="circle-hover" cx="20" cy="20" r="19" fill="none"
+                                                    stroke="#ED1C24" stroke-width="2" />
+                                            </svg>
+                                            <i class="fa-solid fa-angle-right"></i>
+                                        </span>
+                                    </a>
+                                </div>
 
-            <div class="col-3 bg-dark">jdoshf <br>fghgfh<br>dfgfds<br>vcb</div>
-            <div class="col-6 bg-danger">vsdf</div>
-            <div class="col-3 bg-success">cxvc<br>dfgsfdb<br>dffd<br>fdgs</div>
+                                <div class="col-md-6">
+                                    <img src="https://ferrari.scene7.com/is/image/ferrari/ferrari-luce-magazine-news-RULLO2?fmt=avif-alpha&wid=530&hei=597&fit=constrain"
+                                        class="img-fluid" alt="">
+                                </div>
 
-        </div>
-    </div>
+                            </div>
+                        </div>
 
-    <div class="container-fluid">
-        <div id="carouselExampleDark" class="carousel carousel-dark slide">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
-                    aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
-                    aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
-                    aria-label="Slide 3"></button>
+                        <!-- Slide 2 -->
+                        <div class="swiper-slide">
+                            <div class="row align-items-center">
+
+                                <div class="col-md-6 editorial-content">
+                                    <h2>Ferrari 296 GT3 Evo</h2>
+                                    <p>
+                                        Finished the 2026 24 Hours of Daytona in GTD Pro class.
+                                    </p>
+                                    <a href="#" class="discover-link">
+                                        <span class="link-text">Discover More</span>
+                                        <span class="icon-wrapper">
+                                            <svg class="circle-svg" viewBox="0 0 40 40">
+                                                <!-- Base white border -->
+                                                <circle class="circle-base" cx="20" cy="20" r="19" fill="none"
+                                                    stroke="white" stroke-width="2" />
+                                                <!-- Hover animated border -->
+                                                <circle class="circle-hover" cx="20" cy="20" r="19" fill="none"
+                                                    stroke="#ED1C24" stroke-width="2" />
+                                            </svg>
+                                            <i class="fa-solid fa-angle-right"></i>
+                                        </span>
+                                    </a>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <img src="https://ferrari.scene7.com/is/image/ferrari/2026-ferrari-24h-daytona-race-gtw2?fmt=avif-alpha&wid=530&hei=597&fit=constrain"
+                                        class="img-fluid" alt="">
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Navigation -->
+                    <div class="swiper-button-prev custom-nav"></div>
+                    <div class="swiper-button-next custom-nav"></div>
+
+                </div>
             </div>
-            <div class="carousel-inner">
-                <div class="carousel-item active" data-bs-interval="10000">
-                   <video src="vedio/101697-video-720.mp4" autoplay muted loop class="d-block w-100"></video>
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>First slide label</h5>
-                        <p>Some representative placeholder content for the first slide.</p>
-                    </div>
-                </div>
-                <div class="carousel-item" data-bs-interval="2000">
-                    <video src="vedio/101697-video-720.mp4" autoplay muted loop class="d-block w-100"></video>
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>Second slide label</h5>
-                        <p>Some representative placeholder content for the second slide.</p>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <video src="vedio/101697-video-720.mp4" autoplay muted loop class="d-block w-100"></video>
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>Third slide label</h5>
-                        <p>Some representative placeholder content for the third slide.</p>
-                    </div>
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"
-                data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"
-                data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>
-    </div>
-
-
-    <script src="bootstrap-5.3.8-dist (1)/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
-</body>
-
-</html>
+        </section>
