@@ -1,128 +1,229 @@
-/* RESET */
-*{margin:0;padding:0;box-sizing:border-box;}
-body{font-family:Arial,sans-serif;background:#111;color:#fff;overflow-x:hidden;}
+under racing add this as main menu (Formula 1,Endurance,Hypersail,Esports,Driver Academy)
 
-/* NAVBAR */
-.navbar{
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    height:70px;
-    display:flex;
-    justify-content:flex-end;
-    align-items:center;
-    padding:0 30px;
-    z-index:3000;
-}
+for Formula 1 > add this sub menu (Home ,
+SF-26,
 
-/* HAMBURGER BUTTON */
-.menu-button{
-    width:35px;
-    height:30px;
-    display:flex;
-    flex-direction:column;
-    justify-content:space-between;
-    cursor:pointer;
-    z-index:3100;
-}
-.menu-button span{
-    display:block;
-    height:4px;
-    width:100%;
-    background:red;
-    border-radius:3px;
-    transition:0.4s;
-}
-.menu-button.active span:nth-child(1){
-    transform: rotate(45deg) translate(6px,6px);
-}
-.menu-button.active span:nth-child(2){
-    opacity:0;
-}
-.menu-button.active span:nth-child(3){
-    transform: rotate(-45deg) translate(6px,-6px);
-}
+Team,
+News,
+Races,
+Partners,
+Hospitality,
 
-/* FULL SCREEN OVERLAY */
-.overlay-menu{
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    display:flex;
-    justify-content:flex-start;
-    align-items:center;
-    opacity:0;
-    visibility:hidden;
-    transition:opacity 0.5s ease, visibility 0.5s;
-    z-index:2000;
-}
-.overlay-menu.active{
-    opacity:1;
-    visibility:visible;
-}
+Media Galleries) 
 
-/* SIDE PILLAR MENU */
-.overlay-content{
-    width:350px;
-    height:100%;
-    padding:80px 40px;
-    background:#111;
-    display:flex;
-    flex-direction:column;
-    gap:25px;
-    border-right:2px solid red;
-    transform: translateX(-100%);
-    transition:transform 0.5s ease;
-}
-.overlay-menu.active .overlay-content{
-    transform: translateX(0);
-}
+for Endurance add this sub menu (Hypercar,
+Home,
+Ferrari 499P,
+Team,
+Overview,
+Alessandro Pier Guidi,
+James Calado,
+Antonio Giovinazzi,
+Antonio Fuoco,
+Miguel Molina,
+Nicklas Nielsen,
+Yifei Ye,
+Phil Hanson,
+News,
+Races,
+Live Streaming,
+The Red Line,
 
-/* MENU LINKS */
-.overlay-content a{
-    color:white;
-    font-size:28px;
-    font-weight:700;
-    text-decoration:none;
-    position:relative;
-    transition:0.3s;
-}
-.overlay-content a::after{
-    content:"";
-    position:absolute;
-    bottom:-5px;
-    left:50%;
-    width:0%;
-    height:2px;
-    background:red;
-    transform:translateX(-50%);
-    transition:0.4s;
-}
-.overlay-content a:hover::after{
-    width:100%;
-}
-.overlay-content a:hover{
-    transform:scale(1.05);
-}
+Media Gallery,
+Partners) 
 
-/* OVERLAY BG (click to close) */
-.overlay-bg{
-    flex:1;
-    height:100%;
-    background:rgba(0,0,0,0.7);
-    cursor:pointer;
-}
+for Esports add this sub menu (Overview,
+Team,
+News,
+Standings
+Partners)
 
-/* MEDIA RESPONSIVE */
-@media(max-width:768px){
-    .overlay-content{
-        width:80%;
-        padding:80px 20px;
-    }
-    .overlay-content a{
-        font-size:24px;
-    }
-}
+for Driver Academy add this sub menu (Home,
+Mission,
+
+Drivers
+News)
+
+
+under Sports Cars add this as main menu (All models, Your Ferrari, Owners,Ferrari Classiche ,Pre-Owned, Dealers)
+
+for All models > add this sub menu (Range,
+Ferrari Luce,
+849 Testarossa,
+849 Testarossa Spider,
+296 GTB,
+296 GTS,
+Ferrari 12Cilindri,
+Ferrari 12Cilindri Spider,
+Ferrari Purosangue,
+Ferrari Amalfi,
+Ferrari Roma Spider,
+
+Special Series,
+
+Icona,
+
+Supercars,
+
+GT Racing,
+Past Models)
+
+
+
+for Your Ferrari > add this sub menu (Configure,
+Tailor Made,
+Ferrari Genuine,
+Car Services,
+Financial Services,
+Smart Guides)
+
+
+
+for Owners > add this sub menu (On road experiences,
+Corse Clienti,
+Corso Pilota,
+Owners Club,
+
+My Ferrari,
+MyFerrari App,
+MyFerrari Connect,
+MyStore)
+
+
+
+
+
+
+
+
+for Pre-Owned > add this sub menu (Home,
+Why Approved,
+Models,
+Value your car)
+
+
+
+for Dealers > add this sub menu (Find your dealer,
+Discover the official network)
+
+
+
+under Collections add this as main menu (Home , New Window , Overview , Gifts , New Window , Men ,  New Window , Women , New Window , Kids , New Window , Collectibles , New Window , Eyewear , New Window , Scuderia Ferrari Selection)
+
+
+under Experiences add this as main menu (
+
+Corse Clienti,
+
+Ferrari Esports Series,
+
+Ferrari Museums,
+
+Ristorante Cavallino,
+
+Theme Parks,
+Configure your Dreams)
+
+
+
+
+for Corse Clienti > add this sub menu (Home,
+News,
+About Us,
+Calendar,
+
+Ferrari Challenge,
+Overview,
+Drivers,
+Calendar,
+Cars,
+News,
+Media Gallery,
+Partners,
+
+XX Programme,
+
+F1 Clienti,
+
+Sport Prototipi Clienti,
+
+Club Competizioni GT,
+Finali Mondiali,
+
+Cars,
+
+Media Gallery,
+Live Streaming)
+
+
+
+for Ferrari Esports Series > add this sub menu (Overview,
+News)
+
+
+
+for Ferrari Museums > add this sub menu (Home,
+Ferrari Maranello Museum,
+Enzo Ferrari Modena Museum,
+Ferrari Simulation Center,
+Factory Panoramic Tour,
+Personalised Experiences,
+Exclusive Events,
+Tickets and info)
+
+
+
+for Ristorante Cavallino > add this sub menu (Home,
+History,
+Massimo Bottura,
+The Team,
+Menu,
+The Restaurant,
+Contacts,
+Book a table,
+Events,
+Shop,
+Gift voucher)
+
+
+
+for Theme Parks > add this sub menu (Ferrari World Abu Dhabi,
+Ferrari Land Barcelona)
+
+
+
+
+
+
+under About Us add this as main menu (
+
+Corporate,
+News,
+
+Ferrari Magazine,
+History,
+Join Us)
+
+
+
+for Corporate > add this sub menu (Overview,
+About Us,
+
+Governance,
+
+Investors,
+
+Sustainability,
+
+Media)
+
+
+
+
+
+for Ferrari Magazine > add this sub menu (Home,
+Cars,
+Passion,
+Races,
+Subscribe)
+
