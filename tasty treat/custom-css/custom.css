@@ -1,0 +1,316 @@
+        html, body {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden !important;
+        }
+
+        /* ===== HEADER ===== */
+        .top-header .row {
+            display: flex;
+            align-items: center;
+        }
+
+        .top-header-row {
+            padding: 15px 0;
+        }
+
+        .main-logo {
+            height: 50px;
+            width: auto;
+            display: block;
+        }
+
+        .search-box {
+            width: 100%;
+            display: flex;
+            align-items: center;
+        }
+
+        .search-input {
+            height: 45px;
+            border-radius: 0;
+        }
+
+        .search-btn {
+            border: none;
+            background: red;
+            height: 45px;
+            padding: 0 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .search-icon {
+            height: 18px;
+            filter: invert(1);
+        }
+
+        .search-side-logo {
+            display: flex;
+            align-items: center;
+            margin-left: 10px;
+        }
+
+        .outlet-logo,
+        .review-logo {
+            height: 50px;
+            width: auto;
+            display: block;
+        }
+
+        .right-section a {
+            text-decoration: none;
+            color: #000;
+            font-weight: 600;
+        }
+
+        .right-section .icon-logo {
+            height: 28px;
+            width: auto;
+            display: block;
+        }
+
+        .account-link span {
+            font-size: 12px;
+            margin-top: 3px;
+        }
+
+        .phone {
+            text-decoration: none;
+            color: #000;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        /* ===== NAVIGATION ===== */
+        .top-menu-grid {
+            width: 100%;
+            background-color: #fe0000;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            z-index: 999;
+        }
+
+        .ty-menu__items {
+            list-style: none;
+            margin: 0;
+            padding: 0 150px;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .ty-menu__item {
+            position: relative;
+            margin-right: 20px;
+        }
+
+        .ty-menu__item a.ty-menu__item-link {
+            text-decoration: none;
+            color: #ffffff;
+            padding: 10px 5px;
+            display: inline-block;
+            transition: color 0.2s;
+        }
+
+        .ty-menu__item:hover > a.ty-menu__item-link {
+            color: #000;
+        }
+
+        .ty-menu__item:hover {
+            background-color: #a30000;
+        }
+
+        .ty-menu__submenu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            min-width: 180px;
+            max-height: 300px;
+            overflow-y: auto;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+            z-index: 1000;
+        }
+
+        .ty-menu__submenu-item a:hover {
+            background-color: #f2f2f2;
+            color: #d50000;
+        }
+
+        .ty-menu__item:hover .ty-menu__submenu {
+            display: block;
+        }
+
+        @media (max-width: 768px) {
+            .ty-menu__items {
+                flex-direction: column;
+                display: none;
+            }
+        }
+
+        /* ===== SLIDER ===== */
+        .full-width-slider {
+            width: 100vw;
+            max-width: 100vw;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .full-width-slider .item img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .owl-theme .owl-dots {
+            position: absolute;
+            bottom: 15px;
+            width: 100%;
+            text-align: center;
+            z-index: 10;
+        }
+
+        .owl-theme .owl-dots .owl-dot span {
+            width: 12px;
+            height: 12px;
+            background: #ccc;
+            display: inline-block;
+            border-radius: 50%;
+            margin: 0 5px;
+        }
+
+        .owl-theme .owl-dots .owl-dot.active span {
+            background: #d50000;
+        }
+
+        /* ===== FREE HOME DELIVERY BANNER ===== */
+        .free-home-banner img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* <!-- PROMOTIONS CAROUSEL CSS --> */
+/* -----------------------
+   Promotions Section
+----------------------- */
+ .fill-color-tasty {
+  background-color: #fff8f0;
+  padding: 20px 0;
+}
+.promotion-row{
+    background-color: rgb(255, 34, 34);
+    padding: 50px 0px 50px 50px;
+}
+.ty-mainbox-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.ab__dotd_promotions-list {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.ab__dotd_promotions-item {
+  width: 393px;
+  border: 1px solid #eee;
+  padding: 10px;
+  background-color: #fff;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.ab__dotd_promotions-item_image img {
+  width: 100%;
+  display: block;
+  border-radius: 4px;
+}
+
+.ab__dotd_promotions-item_days_left {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #ff0000;
+  color: #fff;
+  padding: 5px 10px;
+  font-weight: bold;
+  border-radius: 3px;
+  text-align: center;
+}
+
+.ab__dotd_promotions-item_days_left span {
+  font-size: 18px;
+}
+
+.ab__dotd_promotions-item_title {
+  margin-top: 10px;
+}
+
+.ab__dotd_promotions-item_title a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.ab__dotd_promotions-item_date {
+  font-size: 12px;
+  color: #666;
+}
+
+.all-promotions__button {
+  margin-top: 20px;
+}
+
+.all-promotions__button .ty-btn__primary {
+  background-color: #ec0000;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 50px;
+  display: inline-block;
+  font-weight: bold;
+}
+
+.all-promotions__button .ty-btn__primary:hover {
+  background-color: #850000;
+}
+
+/* simple baller section  */
+
+.container-fluid-row {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.row-fluid {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
+
+.span16 {
+  width: 100%;
+}
+
+.banner-image-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.banner-image {
+  width: 100%;
+  display: block;
+  border-radius: 0; /* remove if original had rounded corners */
+}
+/* simple baller section end */

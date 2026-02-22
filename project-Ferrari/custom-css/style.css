@@ -1286,28 +1286,55 @@ h6 {
 
 /* next-page  */
 
-.first-logo img{
-    
+.hader-bg-second {
+    background-image: url("https://ferrari.scene7.com/is/image/ferrari/66558d1785b4420011019e09-ferrari-my-store-cover20d20-201920x1080?fmt=avif-alpha&wid=1920&hei=1080&fit=constrain");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
     width: 100%;
-    height: 50px;
+    position: relative;
+    z-index: 0;
+}
+.page-2 {
+    padding: 0px 18px;
 }
 
-.page-2 dl, ol, ul, li {
-    padding: 6px 18px;
+.icon-wrapper-page-2 {
+    color: rgb(255, 255, 255);
+    position: absolute;
+    padding-top: 65px;
+
+}
+.second-text-ariya{
+padding: 100px 0 70px 0px;
+}
+.bg-text-second{
+    background-color: #181818;
 }
 
-.second-page-headin h2{
-    text-transform: uppercase;
-    color: #000 !important;
-    font-weight: 700;
+.f-editorial-split-banner-item__content{
+  background:#ffffff;
+  padding: 193px 174px;
+  height: 100%;
 }
 
-/* hp logo  */
-.cls-1 {
-    fill: #fff;
+.f-editorial-split-banner-item__content-inner{
+  max-width:640px;
 }
-.cls-3{
-    fill: #005ab2;
+
+.f-title{
+  font-size:40px;
+  font-weight:700;
+  letter-spacing:4px;
+  margin:0;
+  color:#000 !important;
 }
-/* hp logo end */
+
+.f-editorial-split-banner-item__description{
+  
+  font-size:18px;
+  line-height:1.5;
+  color:#000000;
+}
 /* next-page end */
